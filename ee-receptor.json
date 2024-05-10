@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "description": "Ansible-EE Receptor Image",
+      "customType": "regex",
+      "fileMatch": ["(^|/)execution-environment.ya?ml$"],
+      "matchStrings": [
+        "RECEPTOR_VERSION=(?<currentValue>[^\\s@]*)(@(?<currentDigest>sha256:[0-9a-f]*))?"
+      ],
+      "depNameTemplate": "quay.io/ansible/receptor",
+      "datasourceTemplate": "docker"
+    }
+  ],
+  "packageRules": [
+    {
+      "description": "Override Ansible Receptor Changelog Location",
+      "matchDepNames": ["quay.io/ansible/receptor"],
+      "matchDatasources": ["docker"],
+      "customChangelogUrl": "https://github.com/ansible/receptor"
+    }
+  ]
+}

@@ -1,5 +1,0 @@
-{
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>austlane/renovate-ansible-builder:ee-common({{arg0}})"],
-  "rangeStrategy": "auto"
-}

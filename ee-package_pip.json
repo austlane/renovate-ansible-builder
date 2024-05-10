@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "description": "Ansible-EE package_pip",
+      "customType": "regex",
+      "fileMatch": ["(^|/)execution-environment.ya?ml$"],
+      "matchStrings": [
+        "package_pip:\\s+(?<depName>[_\\d\\w.-]*)(?<currentValue>.+?)\\s?\\n"
+      ],
+      "datasourceTemplate": "pypi",
+      "versioningTemplate": "pep440"
+    }
+  ]
+}
