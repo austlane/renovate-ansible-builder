@@ -6,7 +6,7 @@
       "customType": "regex",
       "fileMatch": ["(^|/)execution-environment.ya?ml$"],
       "matchStrings": [
-        "RECEPTOR_VERSION=(?<currentValue>[^\\s@]*)(@(?<currentDigest>sha256:[0-9a-f]*))?"
+        "RECEPTOR_VERSION=(?<currentValue>[^\\s@]*)?"
       ],
       "depNameTemplate": "quay.io/ansible/receptor",
       "datasourceTemplate": "docker"
